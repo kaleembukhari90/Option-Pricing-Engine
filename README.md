@@ -1,5 +1,5 @@
 # Option Pricing Engine
-This repository is based on the project for Quantnet C++ Programming for Financial Engineering course and is not intended to be a financial advisory or actionable tool.
+Disclaimer: This repository is not intended to be a financial advisory or actionable tool. It is purely a programming project for Financial Engineering.
 
 This repository contains C++ code for an Option Pricing Engine. The Engine is designed to price Plain-Vanilla European Options using the Black-Scholes Formula and Perpetual American Options using an Exact Formula to price those options.
 
@@ -14,14 +14,15 @@ Put Option Formula:
 
 $$P = Ke^{-rT}N(-d_2) - Se^{{(b-r)}T}N(-d_1)$$
 
-Where:
-- $N(x)$ = Cummulative Distribution Function (CDF) of a Standard Normal Random Variable
+Where;
+
+$N(x)$ = Cummulative Distribution Function (CDF) of a Standard Normal Random Variable
 
 $$N(x) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{x} e^{-y^2/2} \, dy$$
 $$d_1 = \frac{\ln(S/K) + (b+\frac{\sigma^2}{2})T}{\sigma \sqrt{T}}$$
 $$d_2 = \frac{\ln(S/K) + (b-\frac{\sigma^2}{2})T}{\sigma \sqrt{T}}$$
 
-### Greeks
+### Option Greeks
 $$\Delta C = \frac{\partial C}{\partial S} = e^{(b-r)T} N(d_1)$$
 $$\Gamma C = \frac{\partial^2 C}{\partial S^2} = \frac{\partial \Delta C}{\partial S} = \frac{n(d_1)e^{(b-r)T}}{S_0 \sigma \sqrt{T}}$$
 
